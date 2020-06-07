@@ -62,7 +62,7 @@ app.get('/weather', (req, res) => {
             
             res.send ({
                 forecast: forecastData,
-                location,
+                location: location,
                 address: req.query.address
             })
         })
@@ -84,7 +84,7 @@ app.get('/products', (req, res) => {
 app.get('/help/*', (req, res)=> {
     res.render('404', {
         title: '404',
-        name: 'Andrew',
+        name: 'Kristijan',
         errorMessage: 'Aiuto non trovato'
      })
 })
@@ -92,7 +92,7 @@ app.get('/help/*', (req, res)=> {
 app.get('*', (req, res) => {
     res.render('404', {
         title: '404',
-        name: 'Andrew',
+        name: 'Kristijan',
         errorMessage: 'Page not found'
      })
 })
