@@ -9,7 +9,7 @@ const forecast = (latitude, longitude, callback) => {
         } else if ( body.error) {
           callback('Indirizzo non trovato', undefined)
         } else {
-          callback(undefined, body.daily.data[0].summary + ' Attualmente ci sono ' + body.currently.temperature + ' gradi.' + body.currently.precipProbability + '  percento di probabilita che si verifichino precipitazioni. ')
+          callback(undefined, body.daily.data[0].summary + ' Attualmente ci sono ' + body.currently.temperature + ' gradi. Vi è il ' + body.currently.precipProbability + '  percento di probabilita che si verifichino precipitazioni. ')
     }
         
     })
